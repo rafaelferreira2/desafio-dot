@@ -1,0 +1,14 @@
+{
+  "name": "desafio-dot",
+  "version": "1.0.0",
+  "description": "Projeto para desafio técnico Dot",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "author": "Rafael Ferreira",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^14.2.0"
+  }
+}
