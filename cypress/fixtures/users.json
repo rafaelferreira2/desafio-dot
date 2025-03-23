@@ -1,32 +1,56 @@
 {
   "create": {
-    "nome": "Primeiro usuário",
-    "email": "primeiro11@hotmail.com",
-    "password": "teste123",
+    "nome": "Create User",
+    "email": "create_user@hotmail.com",
+    "password": "test123",
     "administrador": "true"
   },
-  "duplicate": {
-    "nome": "Usuário duplicado",
-    "email": "duplicado@hotmail.com",
-    "password": "teste123",
+  "adminUser": {
+    "nome": "Admin User",
+    "email": "admin_user@hotmail.com",
+    "password": "test456",
+    "administrador": "true"
+  },
+  "normalUser": {
+    "nome": "Normal User",
+    "email": "normal_user@hotmail.com",
+    "password": "test789",
     "administrador": "false"
   },
-  "empty_name": {
+  "duplicate": {
+    "nome": "Duplicate User",
+    "email": "duplicate_user@hotmail.com",
+    "password": "test123",
+    "administrador": "false"
+  },
+  "emptyName": {
     "nome": "",
-    "email": "nome@hotmail.com",
+    "email": "empty_name@hotmail.com",
     "password": "teste123",
     "administrador": "true"
   },
-  "empty_email": {
-    "nome": "Email vazio",
+  "emptyEmail": {
+    "nome": "Empty Email",
     "email": "",
     "password": "teste123",
     "administrador": "true"
   },
-  "empty_password": {
-    "nome": "Senha vazia",
+  "emptyPassword": {
+    "nome": "Empty Password",
     "email": "primeiro11@hotmail.com",
     "password": "",
+    "administrador": "true"
+  },
+  "inexistentEmail": {
+    "nome": "Inexistent Email",
+    "email": "inexistent_email@hotmail.com",
+    "password": "teste123",
+    "administrador": "true"
+  },
+  "wrongPassword": {
+    "nome": "Wrong Password",
+    "email": "wrong_password@hotmail.com",
+    "password": "wrong_pass",
     "administrador": "true"
   }
 }

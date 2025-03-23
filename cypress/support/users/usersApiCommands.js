@@ -1,4 +1,4 @@
-Cypress.Commands.add('postUser', (user) => {
+Cypress.Commands.add('apiPostUser', (user) => {
   cy.api({
     url: `${Cypress.config('apiBaseUrl')}/usuarios`,
     method: 'POST',
@@ -7,7 +7,7 @@ Cypress.Commands.add('postUser', (user) => {
   }).then(response => { return response })
 })
 
-Cypress.Commands.add('getUser', (email) => {
+Cypress.Commands.add('apiGetUser', (email) => {
   cy.api({
     url: `${Cypress.config('apiBaseUrl')}/usuarios`,
     method: 'GET',
@@ -16,11 +16,25 @@ Cypress.Commands.add('getUser', (email) => {
   }).then(response => { return response })
 })
 
-Cypress.Commands.add('deleteUser', (identify) => {
-  cy.api({
-    url: `${Cypress.config('apiBaseUrl')}/usuarios/${identify}`,
-    method: 'DELETE'
-  }).then(response => {
-    expect(response.status).to.eq(200)
-  })
+Cypress.Commands.add('apiDeleteUser', (email) => {
+  cy.apiGetUser(email)
+    .then(response => {
+      expect(response.status).to.eq(200)
+      if (response.body.quantidade > 0) {
+        cy.api({
+          url: `${Cypress.config('apiBaseUrl')}/usuarios/${response.body.usuarios[0]._id}`,
+          method: 'DELETE'
+        }).then(response => {
+          expect(response.status).to.eq(200)
+        })
+      }
+    })
+})
+
+Cypress.Commands.add('apiRecreateUser', (user) => {
+  cy.apiDeleteUser(user.email)
+  cy.apiPostUser(user)
+    .then(response => {
+      expect(response.status).to.eq(201)
+    })
 })
