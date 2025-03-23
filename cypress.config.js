@@ -7,5 +7,7 @@ module.exports = defineConfig({
     },
     viewportWidth: 1280,
     viewportHeight: 720,
+    baseUrl: "https://front.serverest.dev",
+    apiBaseUrl: "https://serverest.dev",
   },
 });

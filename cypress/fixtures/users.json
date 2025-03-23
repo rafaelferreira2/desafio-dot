@@ -1,0 +1,32 @@
+{
+  "create": {
+    "nome": "Primeiro usuário",
+    "email": "primeiro11@hotmail.com",
+    "password": "teste123",
+    "administrador": "true"
+  },
+  "duplicate": {
+    "nome": "Usuário duplicado",
+    "email": "duplicado@hotmail.com",
+    "password": "teste123",
+    "administrador": "false"
+  },
+  "empty_name": {
+    "nome": "",
+    "email": "nome@hotmail.com",
+    "password": "teste123",
+    "administrador": "true"
+  },
+  "empty_email": {
+    "nome": "Email vazio",
+    "email": "",
+    "password": "teste123",
+    "administrador": "true"
+  },
+  "empty_password": {
+    "nome": "Senha vazia",
+    "email": "primeiro11@hotmail.com",
+    "password": "",
+    "administrador": "true"
+  }
+}
