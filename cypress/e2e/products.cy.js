@@ -23,7 +23,7 @@ describe('Products', () => {
       })
   })
 
-  it.only('register a new product whithou image', () => {
+  it('register a new product whithou image', () => {
     const product = products.emptyImage
     delete product.imagem
 
