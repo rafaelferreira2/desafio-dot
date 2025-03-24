@@ -1,0 +1,51 @@
+{
+  "completed": {
+    "nome": "carroça",
+    "preco": "500",
+    "descricao": "Essa é uma breve descrição do produto",
+    "quantidade": "20",
+    "imagem": "carroca.jpg"
+  },
+  "duplicate": {
+    "nome": "barquinho",
+    "preco": "1250",
+    "descricao": "Um barco espaçoso e muito veloz",
+    "quantidade": "2",
+    "imagem": "carroca.jpg"
+  },
+  "emptyName": {
+    "nome": "",
+    "preco": "123",
+    "descricao": "Produto sem nome",
+    "quantidade": "2",
+    "imagem": "carroca.jpg"
+  },
+  "emptyPrice": {
+    "nome": "emptyPrice",
+    "preco": "",
+    "descricao": "Produto sem preco",
+    "quantidade": "2",
+    "imagem": "carroca.jpg"
+  },
+  "emptyDescription": {
+    "nome": "emptyDescription",
+    "preco": "11",
+    "descricao": "",
+    "quantidade": "23",
+    "imagem": "carroca.jpg"
+  },
+  "emptyQuantity": {
+    "nome": "emptyQuantity",
+    "preco": "1250",
+    "descricao": "Produto sem quantidade",
+    "quantidade": "",
+    "imagem": "carroca.jpg"
+  },
+  "emptyImage": {
+    "nome": "emptyImage",
+    "preco": "1250",
+    "descricao": "Produto sem imagem",
+    "quantidade": "3",
+    "imagem": ""
+  }
+}

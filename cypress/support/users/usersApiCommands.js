@@ -1,6 +1,6 @@
 Cypress.Commands.add('apiPostUser', (user) => {
-  cy.api({
-    url: `${Cypress.config('apiBaseUrl')}/usuarios`,
+  cy.request({
+    url: `${Cypress.env('apiUrl')}/usuarios`,
     method: 'POST',
     body: user,
     failOnStatusCode: false
@@ -8,8 +8,8 @@ Cypress.Commands.add('apiPostUser', (user) => {
 })
 
 Cypress.Commands.add('apiGetUser', (email) => {
-  cy.api({
-    url: `${Cypress.config('apiBaseUrl')}/usuarios`,
+  cy.request({
+    url: `${Cypress.env('apiUrl')}/usuarios`,
     method: 'GET',
     qs: { email: email },
     failOnStatusCode: false
@@ -21,8 +21,8 @@ Cypress.Commands.add('apiDeleteUser', (email) => {
     .then(response => {
       expect(response.status).to.eq(200)
       if (response.body.quantidade > 0) {
-        cy.api({
-          url: `${Cypress.config('apiBaseUrl')}/usuarios/${response.body.usuarios[0]._id}`,
+        cy.request({
+          url: `${Cypress.env('apiUrl')}/usuarios/${response.body.usuarios[0]._id}`,
           method: 'DELETE'
         }).then(response => {
           expect(response.status).to.eq(200)

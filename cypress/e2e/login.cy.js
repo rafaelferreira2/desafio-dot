@@ -8,6 +8,7 @@ describe('login', () => {
     cy.apiRecreateUser(user)
     cy.login(user.email, user.password)
     cy.isLoggedIn(user.administrador, user.nome)
+    cy.url().should('include', '/admin/home')
   })
 
   it('login normal user', () => {
@@ -16,6 +17,7 @@ describe('login', () => {
     cy.apiRecreateUser(user)
     cy.login(user.email, user.password)
     cy.isLoggedIn(user.administrador, user.nome)
+    cy.url().should('include', '/home')
   })
 
   it('inexistent email', () => {

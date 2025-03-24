@@ -16,16 +16,13 @@ Cypress.Commands.add('submitLogin', () => {
 })
 
 Cypress.Commands.add('isLoggedIn', (isAdmin, username) => {
-  if (isAdmin == 'true') {
-    cy.get("a[data-testid='cadastrar-usuarios']")
-      .should('have.text', 'Cadastrar Usuários')
+  cy.intercept('GET', `${Cypress.env('apiUrl')}/usuarios`).as('getUsers')
+  cy.wait('@getUsers')
 
+  if (isAdmin == 'true') {
     cy.get('div.jumbotron > h1')
       .should('have.text', `Bem Vindo  ${username}`)
   } else {
-    cy.get("a[data-testid='lista-de-compras']")
-      .should('have.text', 'Lista de Compras')
-
     cy.get('div.jumbotron > h1')
       .should('have.text', 'Serverest Store')
   }

@@ -52,5 +52,11 @@
     "email": "wrong_password@hotmail.com",
     "password": "wrong_pass",
     "administrador": "true"
+  },
+  "adminToken": {
+    "nome": "Fulano da Silva",
+    "email": "fulano@qa.com",
+    "password": "teste",
+    "administrador": "true"
   }
 }

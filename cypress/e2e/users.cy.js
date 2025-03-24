@@ -31,7 +31,6 @@ describe('user registration', () => {
   })
 
   context('required fields', () => {
-
     it('empty name', () => {
       const user = data.emptyName
 
@@ -57,7 +56,6 @@ describe('user registration', () => {
     })
 
     it('all required fields', () => {
-
       const fields = ['Nome', 'Email', 'Password']
 
       cy.visitCreateUser()
