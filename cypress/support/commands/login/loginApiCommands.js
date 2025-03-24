@@ -1,4 +1,4 @@
-const data = require('../../fixtures/users.json')
+const data = require('../../../fixtures/users.json')
 const user = data.adminToken
 
 Cypress.Commands.add('getToken', () => {

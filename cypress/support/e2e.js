@@ -14,12 +14,12 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands/commands'
 
-import './componnets'
-import './users/usersApiCommands'
-import './users/usersCommands'
-import './login/loginCommands'
-import './login/loginApiCommands'
-import './producuts/productsCommands'
-import './producuts/productsApiCommands'
+import './commands/componnets'
+import './commands/users/usersCommands'
+import './commands/users/usersApiCommands'
+import './commands/login/loginCommands'
+import './commands/login/loginApiCommands'
+import './commands/producuts/productsCommands'
+import './commands/producuts/productsApiCommands'
