@@ -11,6 +11,6 @@ module.exports = defineConfig({
     env: {
       apiUrl: "https://serverest.dev"
     },
-    requestTimeout: 15000
+    // requestTimeout: 15000
   },
 });

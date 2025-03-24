@@ -14,7 +14,7 @@ Cypress.Commands.add('createUser', (user) => {
 })
 
 Cypress.Commands.add('successRegister', () => {
-  cy.get('a.alert-link')
+  cy.get('a.alert-link', { timeout: 15000 })
 })
 
 Cypress.Commands.add('submitUser', () => {

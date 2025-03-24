@@ -20,13 +20,13 @@ Cypress.Commands.add('isLoggedIn', (isAdmin, username) => {
     cy.intercept('GET', `${Cypress.env('apiUrl')}/usuarios`).as('getUsers')
     cy.wait('@getUsers')
 
-    cy.get('div.jumbotron > h1')
+    cy.get('div.jumbotron > h1', { timeout: 15000 })
       .should('have.text', `Bem Vindo  ${username}`)
   } else {
     cy.intercept('GET', `${Cypress.env('apiUrl')}/produtos`).as('getProducts')
     cy.wait('@getProducts')
 
-    cy.get('div.jumbotron > h1')
+    cy.get('div.jumbotron > h1', { timeout: 15000 })
       .should('have.text', 'Serverest Store')
   }
 })

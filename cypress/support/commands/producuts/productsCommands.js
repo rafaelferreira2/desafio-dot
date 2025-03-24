@@ -28,6 +28,6 @@ Cypress.Commands.add('listRowtarget', (name) => {
 })
 
 Cypress.Commands.add('inProductList', (name) => {
-  cy.get('div.jumbotron > h1')
+  cy.get('div.jumbotron > h1', { timeout: 15000 })
     .should('have.text', 'Lista dos Produtos')
 })
