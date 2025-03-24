@@ -10,7 +10,6 @@ module.exports = defineConfig({
     baseUrl: "https://front.serverest.dev",
     env: {
       apiUrl: "https://serverest.dev"
-    },
-    // requestTimeout: 15000
+    }
   },
 });
