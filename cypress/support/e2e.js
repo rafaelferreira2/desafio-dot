@@ -1,5 +1,3 @@
-import './commands/commands'
-
 import './commands/componnets'
 import './commands/users/usersCommands'
 import './commands/users/usersApiCommands'
