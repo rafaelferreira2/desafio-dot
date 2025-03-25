@@ -19,6 +19,7 @@ jobs:
       - name: Run E2E tests
         run: npx cypress run
   cypress-chrome-tests:
+    needs: cypress-electron-tests
     runs-on: ubuntu-latest
     container:
       image: cypress/browsers:node-22.14.0-chrome-133.0.6943.53-1-ff-135.0-edge-133.0.3065.59-1
