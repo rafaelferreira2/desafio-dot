@@ -30,6 +30,7 @@ Todas as histórias de usuários estão [AQUI](./user_story).
 5. Ao finalizar em caso de sucesso, apresentará o workflow com ícone verde
 6. Acessar e selecionar qual a o navegador executado deseja visualizar o resultado dos testes
 7. Selecionar o step 'Run E2E tests' para visualizar o relatório
+   
 ![poster](./.github/actions.png)
 
 ## Execução local
