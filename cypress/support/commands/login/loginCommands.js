@@ -3,12 +3,16 @@ Cypress.Commands.add('visitLogin', () => {
 })
 
 Cypress.Commands.add('login', (email, password) => {
-  cy.visitLogin()
+  cy.fillLogin(email, password)
+  cy.intercept('GET', '**/usuarios**').as('getUsers')
+  cy.submitLogin()
+  cy.wait('@getUsers')
+})
 
+Cypress.Commands.add('fillLogin', (email, password) => {
+  cy.visitLogin()
   if (email != '') { cy.get('#email').type(email) }
   if (password != '') { cy.get('#password').type(password) }
-
-  cy.submitLogin()
 })
 
 Cypress.Commands.add('submitLogin', () => {

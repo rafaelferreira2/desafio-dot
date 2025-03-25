@@ -24,7 +24,8 @@ describe('login', () => {
     const user = data.inexistentEmail
 
     cy.apiDeleteUser(user.email)
-    cy.login(user.email, user.password)
+    cy.fillLogin(user.email, user.password)
+    cy.submitLogin()
     cy.alertError()
       .should('have.text', 'Email e/ou senha inválidos')
   })
@@ -34,7 +35,8 @@ describe('login', () => {
     const userWrongPassword = data.wrongPassword
 
     cy.apiRecreateUser(user)
-    cy.login(user.email, userWrongPassword.password)
+    cy.fillLogin(user.email, userWrongPassword.password)
+    cy.submitLogin()
     cy.alertError()
       .should('have.text', 'Email e/ou senha inválidos')
   })
@@ -43,7 +45,8 @@ describe('login', () => {
     it('empty email', () => {
       const user = data.emptyEmail
 
-      cy.login(user.email, user.password)
+      cy.fillLogin(user.email, user.password)
+      cy.submitLogin()
       cy.alertError()
         .should('have.text', 'Email é obrigatório')
     })
@@ -51,7 +54,8 @@ describe('login', () => {
     it('empty password', () => {
       const user = data.emptyPassword
 
-      cy.login(user.email, user.password)
+      cy.fillLogin(user.email, user.password)
+      cy.submitLogin()
       cy.alertError()
         .should('have.text', 'Password é obrigatório')
     })
