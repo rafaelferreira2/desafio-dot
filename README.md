@@ -18,7 +18,8 @@ Todas as histórias de usuários estão [AQUI](./user_story).
 
 ## Stacks utilizadas
 - Javascript
-- Cypress
+- Cypress (14.2.0)
+- NodeJs (v22.14.0)
 
 ## Execução via Github Actions
 
