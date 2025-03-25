@@ -26,7 +26,7 @@ describe('login', () => {
     cy.apiDeleteUser(user.email)
     cy.login(user.email, user.password)
     cy.alertError()
-        .should('have.text', 'Email e/ou senha inválidos')
+      .should('have.text', 'Email e/ou senha inválidos')
   })
 
   it('wrong password', () => {
@@ -36,7 +36,7 @@ describe('login', () => {
     cy.apiRecreateUser(user)
     cy.login(user.email, userWrongPassword.password)
     cy.alertError()
-        .should('have.text', 'Email e/ou senha inválidos')
+      .should('have.text', 'Email e/ou senha inválidos')
   })
 
   context('invalid fields', () => {
