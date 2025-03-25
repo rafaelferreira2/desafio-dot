@@ -2,6 +2,20 @@
 
 Repositório de teste técnico Dot Digital Group
 
+Todas as histórias de usuários estão [AQUI](./user_story).
+
+## Estimativas
+- Teste exploratório (1h)
+  - Sem nunca ter contato com o site em questão, realizei um teste exploratório prévio para me familiarizar com os fluxos e levantamento de cenários
+- Levantamento de cenários (1h)
+- Setup inicial do projeto (estrutura base, pipeline de execução de testes, integrações via API) (2h)
+- Automação de testes (11h)
+  - Média de 0,5h por cenário de testes 
+  - Criação de massas de testes
+  - Implementação de scripts
+  - Execução e validação
+  - Documentação
+
 ## Stacks utilizadas
 - Javascript
 - Cypress
