@@ -55,7 +55,7 @@
   },
   "adminToken": {
     "nome": "Fulano da Silva",
-    "email": "fulano@qa.com",
+    "email": "master_user@qa.com",
     "password": "teste",
     "administrador": "true"
   }

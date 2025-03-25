@@ -4,6 +4,7 @@ const user = users.adminToken
 
 describe('Products', () => {
   beforeEach(() => {
+    cy.apiRecreateUser(user)
     cy.login(user.email, user.password)
     cy.isLoggedIn(user.administrador, user.nome)
   })
