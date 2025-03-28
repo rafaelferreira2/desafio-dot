@@ -5,3 +5,5 @@ import './commands/login/loginCommands'
 import './commands/login/loginApiCommands'
 import './commands/producuts/productsCommands'
 import './commands/producuts/productsApiCommands'
+
+import 'cypress-mochawesome-reporter/register';
